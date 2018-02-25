@@ -108,7 +108,7 @@ def NEW_adjRevIvl(self, card, idealIvl):
 
         cardsdue.append([i, len(cds), ease, sibling])
     
-    p(BeautifulSoup(card._getQA()['q'], "lxml").getText())
+    p(BeautifulSoup(card._getQA()['q'], "html.parser").getText())
     lowest = cardsdue[0]
     for c in cardsdue:
         if maxdue == mindue:
